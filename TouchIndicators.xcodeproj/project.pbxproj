@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		334B1B8E18451A3600A210C2 /* TouchIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 334B1B8D18451A3600A210C2 /* TouchIndicatorView.m */; };
 		33AF26C818450D7000B62B59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33AF26C718450D7000B62B59 /* Foundation.framework */; };
-		33AF26CD18450D7100B62B59 /* TouchIndicators.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 33AF26CC18450D7100B62B59 /* TouchIndicators.h */; };
-		33AF26CF18450D7100B62B59 /* TouchIndicators.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AF26CE18450D7100B62B59 /* TouchIndicators.m */; };
 		33AF26D618450D7100B62B59 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33AF26D518450D7100B62B59 /* XCTest.framework */; };
 		33AF26D718450D7100B62B59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33AF26C718450D7000B62B59 /* Foundation.framework */; };
 		33AF26D918450D7100B62B59 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33AF26D818450D7100B62B59 /* UIKit.framework */; };
@@ -35,18 +34,17 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				33AF26CD18450D7100B62B59 /* TouchIndicators.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		334B1B8C18451A3600A210C2 /* TouchIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchIndicatorView.h; sourceTree = SOURCE_ROOT; };
+		334B1B8D18451A3600A210C2 /* TouchIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchIndicatorView.m; sourceTree = SOURCE_ROOT; };
 		33AF26C418450D7000B62B59 /* libTouchIndicators.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTouchIndicators.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		33AF26C718450D7000B62B59 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		33AF26CB18450D7100B62B59 /* TouchIndicators-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TouchIndicators-Prefix.pch"; sourceTree = "<group>"; };
-		33AF26CC18450D7100B62B59 /* TouchIndicators.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchIndicators.h; sourceTree = "<group>"; };
-		33AF26CE18450D7100B62B59 /* TouchIndicators.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchIndicators.m; sourceTree = "<group>"; };
 		33AF26D418450D7100B62B59 /* TouchIndicatorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TouchIndicatorsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33AF26D518450D7100B62B59 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		33AF26D818450D7100B62B59 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -110,8 +108,8 @@
 		33AF26C918450D7000B62B59 /* TouchIndicators */ = {
 			isa = PBXGroup;
 			children = (
-				33AF26CC18450D7100B62B59 /* TouchIndicators.h */,
-				33AF26CE18450D7100B62B59 /* TouchIndicators.m */,
+				334B1B8C18451A3600A210C2 /* TouchIndicatorView.h */,
+				334B1B8D18451A3600A210C2 /* TouchIndicatorView.m */,
 				33AF26CA18450D7100B62B59 /* Supporting Files */,
 			);
 			path = TouchIndicators;
@@ -224,7 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33AF26CF18450D7100B62B59 /* TouchIndicators.m in Sources */,
+				334B1B8E18451A3600A210C2 /* TouchIndicatorView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +407,7 @@
 				33AF26E918450D7100B62B59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		33AF26EA18450D7100B62B59 /* Build configuration list for PBXNativeTarget "TouchIndicatorsTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +416,7 @@
 				33AF26EC18450D7100B62B59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
