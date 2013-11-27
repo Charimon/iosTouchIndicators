@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		334B1B8E18451A3600A210C2 /* TouchIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 334B1B8D18451A3600A210C2 /* TouchIndicatorView.m */; };
+		334B1B9118451B1900A210C2 /* TouchIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 334B1B9018451B1900A210C2 /* TouchIndicatorView.m */; };
+		334B1B9E1845416000A210C2 /* AnimatorGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 334B1B9D1845416000A210C2 /* AnimatorGroup.m */; };
+		334B1BAB184574ED00A210C2 /* TapAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 334B1BAA184574ED00A210C2 /* TapAnimator.m */; };
+		334B1BAE18460B9200A210C2 /* UnTapAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 334B1BAD18460B9200A210C2 /* UnTapAnimator.m */; };
+		3371C8591846213400E25E22 /* DragAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3371C8581846213400E25E22 /* DragAnimator.m */; };
 		33AF26C818450D7000B62B59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33AF26C718450D7000B62B59 /* Foundation.framework */; };
 		33AF26D618450D7100B62B59 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33AF26D518450D7100B62B59 /* XCTest.framework */; };
 		33AF26D718450D7100B62B59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33AF26C718450D7000B62B59 /* Foundation.framework */; };
@@ -40,8 +44,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		334B1B8C18451A3600A210C2 /* TouchIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchIndicatorView.h; sourceTree = SOURCE_ROOT; };
-		334B1B8D18451A3600A210C2 /* TouchIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchIndicatorView.m; sourceTree = SOURCE_ROOT; };
+		334B1B8F18451B1900A210C2 /* TouchIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchIndicatorView.h; sourceTree = "<group>"; };
+		334B1B9018451B1900A210C2 /* TouchIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchIndicatorView.m; sourceTree = "<group>"; };
+		334B1B961845258D00A210C2 /* TouchConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchConstants.h; sourceTree = "<group>"; };
+		334B1B9C1845416000A210C2 /* AnimatorGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatorGroup.h; sourceTree = "<group>"; };
+		334B1B9D1845416000A210C2 /* AnimatorGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatorGroup.m; sourceTree = "<group>"; };
+		334B1BA8184574AD00A210C2 /* Animator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Animator.h; sourceTree = "<group>"; };
+		334B1BA9184574ED00A210C2 /* TapAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapAnimator.h; sourceTree = "<group>"; };
+		334B1BAA184574ED00A210C2 /* TapAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapAnimator.m; sourceTree = "<group>"; };
+		334B1BAC18460B9200A210C2 /* UnTapAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnTapAnimator.h; sourceTree = "<group>"; };
+		334B1BAD18460B9200A210C2 /* UnTapAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnTapAnimator.m; sourceTree = "<group>"; };
+		3371C8571846213400E25E22 /* DragAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragAnimator.h; sourceTree = "<group>"; };
+		3371C8581846213400E25E22 /* DragAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragAnimator.m; sourceTree = "<group>"; };
 		33AF26C418450D7000B62B59 /* libTouchIndicators.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTouchIndicators.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		33AF26C718450D7000B62B59 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		33AF26CB18450D7100B62B59 /* TouchIndicators-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TouchIndicators-Prefix.pch"; sourceTree = "<group>"; };
@@ -76,6 +90,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		334B1BAF1846176500A210C2 /* animators */ = {
+			isa = PBXGroup;
+			children = (
+				334B1BA8184574AD00A210C2 /* Animator.h */,
+				334B1BA9184574ED00A210C2 /* TapAnimator.h */,
+				334B1BAA184574ED00A210C2 /* TapAnimator.m */,
+				334B1BAC18460B9200A210C2 /* UnTapAnimator.h */,
+				334B1BAD18460B9200A210C2 /* UnTapAnimator.m */,
+				3371C8571846213400E25E22 /* DragAnimator.h */,
+				3371C8581846213400E25E22 /* DragAnimator.m */,
+			);
+			name = animators;
+			sourceTree = "<group>";
+		};
 		33AF26BB18450D7000B62B59 = {
 			isa = PBXGroup;
 			children = (
@@ -108,8 +136,12 @@
 		33AF26C918450D7000B62B59 /* TouchIndicators */ = {
 			isa = PBXGroup;
 			children = (
-				334B1B8C18451A3600A210C2 /* TouchIndicatorView.h */,
-				334B1B8D18451A3600A210C2 /* TouchIndicatorView.m */,
+				334B1BAF1846176500A210C2 /* animators */,
+				334B1B9C1845416000A210C2 /* AnimatorGroup.h */,
+				334B1B9D1845416000A210C2 /* AnimatorGroup.m */,
+				334B1B961845258D00A210C2 /* TouchConstants.h */,
+				334B1B8F18451B1900A210C2 /* TouchIndicatorView.h */,
+				334B1B9018451B1900A210C2 /* TouchIndicatorView.m */,
 				33AF26CA18450D7100B62B59 /* Supporting Files */,
 			);
 			path = TouchIndicators;
@@ -222,7 +254,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				334B1B8E18451A3600A210C2 /* TouchIndicatorView.m in Sources */,
+				3371C8591846213400E25E22 /* DragAnimator.m in Sources */,
+				334B1BAB184574ED00A210C2 /* TapAnimator.m in Sources */,
+				334B1BAE18460B9200A210C2 /* UnTapAnimator.m in Sources */,
+				334B1B9118451B1900A210C2 /* TouchIndicatorView.m in Sources */,
+				334B1B9E1845416000A210C2 /* AnimatorGroup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
