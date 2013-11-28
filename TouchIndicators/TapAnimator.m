@@ -14,6 +14,11 @@
 +(CGFloat) time { return 1.f; }
 +(void) animate: (CAShapeLayer *) layer { [self animate:layer from: 0 delegate:nil]; }
 +(void) animate: (CAShapeLayer *) layer from: (CGFloat) time delegate:(id)delegate {
+    
+    layer.anchorPoint = CGPointMake(.5, .5f);
+    layer.strokeStart = 0.f;
+    layer.strokeEnd = 1.f;
+    
     CAKeyframeAnimation * opacity = [CAKeyframeAnimation animationWithKeyPath:@"opacity"];
     opacity.keyTimes = @[[NSNumber numberWithFloat:0.f], [NSNumber numberWithFloat:.5f]];
     opacity.values = @[[NSNumber numberWithFloat:0.f], [NSNumber numberWithFloat:1.f]];
@@ -34,6 +39,14 @@
     shadowColor.keyTimes = @[[NSNumber numberWithFloat:0.f]];
     shadowColor.values = @[(id)[UIColor colorWithRed:40.f/255.f green:167.f/255.f blue:246.f/255.f alpha:1.f].CGColor];
     
+    CAKeyframeAnimation * fillColor = [CAKeyframeAnimation animationWithKeyPath:@"fillColor"];
+    fillColor.keyTimes = @[[NSNumber numberWithFloat:0.f]];
+    fillColor.values = @[(id)[UIColor colorWithRed:40.f/255.f green:167.f/255.f blue:246.f/255.f alpha:.8f].CGColor];
+    
+    CAKeyframeAnimation * shadowOffset = [CAKeyframeAnimation animationWithKeyPath:@"shadowOffset"];
+    shadowOffset.keyTimes = @[[NSNumber numberWithFloat:0.f]];
+    shadowOffset.values = @[[NSValue valueWithCGSize:CGSizeZero]];
+    
     CAAnimationGroup *group = [CAAnimationGroup animation];
     group.duration = [self time];
     group.fillMode = kCAFillModeForwards;
@@ -41,7 +54,7 @@
     group.beginTime = time;
     group.delegate = delegate;
     group.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
-    group.animations = @[opacity, scale, shadowRadius, shadowOpacity, shadowColor];
+    group.animations = @[opacity, scale, shadowRadius, shadowOpacity, shadowColor, fillColor, shadowOffset];
 
     [layer addAnimation:group forKey:@"tapAnimation"];
 }

@@ -51,16 +51,13 @@
     circle.path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, self.size.width, self.size.height) cornerRadius:MIN(self.size.width/2,self.size.height/2)].CGPath;
     circle.position = CGPointMake(self.size.width/2, self.size.height/2);
     circle.bounds = CGRectMake(0, 0, self.size.width, self.size.height);
-    circle.anchorPoint = CGPointMake(.5, .5f);
-    circle.strokeStart = 0.f;
-    circle.strokeEnd = 1.f;
     circle.opacity = 0.f;
-    circle.shadowOffset = CGSizeZero;
-    circle.fillColor = [UIColor colorWithRed:40.f/255.f green:167.f/255.f blue:246.f/255.f alpha:.8f].CGColor;
     [self.layer addSublayer:circle];
     
     AnimatorGroup *group = [[AnimatorGroup alloc] initWithAnimators: @[[TapAnimator class], animator, [UnTapAnimator class]]];
+//    AnimatorGroup *group = [[AnimatorGroup alloc] initWithAnimators: @[[TapAnimator class]]];
     [group animate: circle repeat:3];
+//    [group animate:finger repeat: 4];
 }
 
 

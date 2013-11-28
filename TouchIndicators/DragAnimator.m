@@ -67,7 +67,6 @@
         opacity.fillMode = kCAFillModeForwards;
         opacity.removedOnCompletion = NO;
         opacity.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
-        NSLog(@"ratio: %f", iTrackRatio);
         opacity.keyTimes = @[[NSNumber numberWithFloat:(iTrackRatio)*.7], [NSNumber numberWithFloat:.8*iTrackRatio], [NSNumber numberWithFloat:1.f - trackRatio], [NSNumber numberWithFloat:1.f]];
         opacity.values = @[[NSNumber numberWithFloat:0.f], [NSNumber numberWithFloat:1.f], [NSNumber numberWithFloat:1.f], [NSNumber numberWithFloat:0.f]];
 
