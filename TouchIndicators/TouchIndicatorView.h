@@ -10,6 +10,7 @@
 #import "TouchConstants.h"
 
 @interface TouchIndicatorView : UIView
+@property (nonatomic) NSUInteger repeat;
 -(void) startAnimation;
 -(void) stopAnimation;
 -(id) initWithSize: (CGSize) size action: (TouchActionType) action;

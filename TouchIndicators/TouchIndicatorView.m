@@ -55,7 +55,7 @@
     [self.layer addSublayer:circle];
     
     AnimatorGroup *group = [[AnimatorGroup alloc] initWithAnimators: @[[TapAnimator class], animator, [UnTapAnimator class]]];
-    [group animate: circle repeat:HUGE_VAL];
+    [group animate: circle repeat:self.repeat];
 }
 
 
